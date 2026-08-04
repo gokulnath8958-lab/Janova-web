@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janova | Next-Gen Software, Billing & Attendance Solutions</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b091a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --primary-gradient: linear-gradient(135deg, #ff007f 0%, #7928ca 50%, #4f46e5 100%);
+            --secondary-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            --text-main: #ffffff;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(121, 40, 202, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.15) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        .cta-btn {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(121, 40, 202, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(121, 40, 202, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* 3D Tilt Cards Container */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 8%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* 3D Card Style */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px 30px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            transition: transform 0.1s ease, border-color 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .card-content {
+            transform: translateZ(30px);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 80px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">JANOVA</div>
+        <nav>
+            <a href="#features">Solutions</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="cta-btn">Get Started</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empowering Enterprises with <span>Next-Gen Software Solutions</span></h1>
+        <p>Janova delivers high-performance ecosystem tools including lightning-fast software sales management, foolproof automated billing, and secure facial/biometric attendance tracking.</p>
+        <a href="#features" class="cta-btn" style="padding: 14px 32px; font-size: 16px;">Explore Features</a>
+    </section>
+
+    <!-- 3D Interactive Feature Grid -->
+    <section class="features" id="features">
+        <!-- Card 1 -->
+        <div class="card" data-tilt>
+            <div class="card-content">
+                <div class="card-icon">⚡</div>
+                <h3>Software Sales Suite</h3>
+                <p>Streamline your license management, client onboarding, and SaaS subscriptions with real-time analytics and frictionless checkout pipes.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-tilt>
+            <div class="card-content">
+                <div class="card-icon">💳</div>
+                <h3>Automated Billing</h3>
+                <p>Generate dynamic invoices, track multi-currency transactions securely, and cut down payment processing cycles by up to 80%.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-tilt>
+            <div class="card-content">
+                <div class="card-icon">📊</div>
+                <h3>Smart Attendance</h3>
+                <p>Cloud-synced tracking architecture designed for modern teams, supporting automated logs, shift configurations, and performance metrics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Janova Technologies Inc. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for 3D Tilt Effect -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; //x position within card
+                const y = e.clientY - rect.top;  //y position within card
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -12; // Max rotation deg
+                const rotateY = ((x - centerX) / centerX) * 12;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+            });
+        });
+    </script>
+</body>
+</html>
