@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janova — Run billing, attendance & sales in one place</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+<div class="bg-glow bg-glow-3"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">J</span>
+      <span class="logo-text">Janova</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#modules">Modules</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact" class="nav-cta">Get a demo</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Billing · Attendance · Sales — one operating layer</p>
+      <h1>Run the business side of your business from <span class="text-gradient">one screen.</span></h1>
+      <p class="hero-sub">Janova replaces the spreadsheet-and-five-tools mess with a single system that invoices customers, clocks your team in, and tells you what's actually selling.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Start free trial</a>
+        <a href="#modules" class="btn btn-ghost">See the modules ↓</a>
+      </div>
+      <div class="hero-trust">
+        <span>Trusted by growing teams in</span>
+        <strong>retail</strong> <em>·</em> <strong>services</strong> <em>·</em> <strong>manufacturing</strong>
+      </div>
+    </div>
+
+    <div class="hero-stage" id="heroStage">
+      <div class="card-3d card-billing" id="cardBilling">
+        <div class="card-head">
+          <span class="dot dot-pink"></span> Invoice #JN-1042
+        </div>
+        <div class="card-row"><span>Bright Coffee Co.</span><strong>$1,280.00</strong></div>
+        <div class="card-row"><span>Status</span><span class="pill pill-paid">Paid</span></div>
+        <div class="card-bar"><div class="card-bar-fill"></div></div>
+      </div>
+
+      <div class="card-3d card-attendance" id="cardAttendance">
+        <div class="card-head"><span class="dot dot-cyan"></span> Attendance today</div>
+        <div class="ring-wrap">
+          <svg viewBox="0 0 100 100" class="ring">
+            <circle cx="50" cy="50" r="42" class="ring-track"/>
+            <circle cx="50" cy="50" r="42" class="ring-fill"/>
+          </svg>
+          <div class="ring-label">92%<span>on time</span></div>
+        </div>
+      </div>
+
+      <div class="card-3d card-sales" id="cardSales">
+        <div class="card-head"><span class="dot dot-amber"></span> Sales pipeline</div>
+        <div class="bars">
+          <div class="bar" style="--h:40%"></div>
+          <div class="bar" style="--h:65%"></div>
+          <div class="bar" style="--h:50%"></div>
+          <div class="bar" style="--h:85%"></div>
+          <div class="bar" style="--h:70%"></div>
+        </div>
+        <div class="card-row small"><span>This quarter</span><strong>+34%</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT STRIP -->
+  <section class="strip">
+    <div class="strip-item"><strong>3</strong><span>core modules, one login</span></div>
+    <div class="strip-item"><strong>10k+</strong><span>invoices processed monthly</span></div>
+    <div class="strip-item"><strong>99.9%</strong><span>attendance sync uptime</span></div>
+    <div class="strip-item"><strong>&lt;2min</strong><span>average setup per teammate</span></div>
+  </section>
+
+  <!-- MODULES -->
+  <section class="modules" id="modules">
+    <div class="section-head">
+      <p class="eyebrow">What's inside</p>
+      <h2>Three tools your team already needs, built to work as one.</h2>
+    </div>
+
+    <div class="module-grid">
+      <article class="module-card tilt" data-tilt>
+        <div class="module-icon icon-pink">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 13h8M8 17h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Billing</h3>
+        <p>Create invoices, collect payments, and track what's overdue without leaving the dashboard. Recurring plans and one-off sales, same workflow.</p>
+        <ul class="module-list">
+          <li>Auto-numbered invoices &amp; receipts</li>
+          <li>Payment status at a glance</li>
+          <li>Tax-ready exports</li>
+        </ul>
+      </article>
+
+      <article class="module-card tilt" data-tilt>
+        <div class="module-icon icon-cyan">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Attendance</h3>
+        <p>Clock-in and clock-out from any device, with shifts, late flags, and leave requests handled automatically — no more paper registers.</p>
+        <ul class="module-list">
+          <li>Geo-tagged clock-in/out</li>
+          <li>Shift &amp; overtime tracking</li>
+          <li>Leave requests &amp; approvals</li>
+        </ul>
+      </article>
+
+      <article class="module-card tilt" data-tilt>
+        <div class="module-icon icon-amber">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9M11 19V4M18 19v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Sales</h3>
+        <p>Track leads through your pipeline, see which deals are closing, and turn a won deal into an invoice in one click.</p>
+        <ul class="module-list">
+          <li>Pipeline &amp; deal stages</li>
+          <li>Deal → invoice handoff</li>
+          <li>Rep-by-rep performance</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="section-head">
+      <p class="eyebrow">How teams set it up</p>
+      <h2>Live in an afternoon, not a quarter.</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <span class="how-num">1</span>
+        <h4>Import your people &amp; customers</h4>
+        <p>Bring in your team roster and customer list from a spreadsheet — Janova maps the columns for you.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-num">2</span>
+        <h4>Turn on the modules you need</h4>
+        <p>Start with just Billing, just Attendance, or all three. Nothing else lights up until you ask for it.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-num">3</span>
+        <h4>Invite your team</h4>
+        <p>Everyone gets a login scoped to their role — cashiers see billing, staff see attendance, reps see pipeline.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta-card">
+      <h2>Bring billing, attendance and sales into one login.</h2>
+      <p>Set up a free workspace for your team — no card required.</p>
+      <form class="cta-form" id="ctaForm">
+        <input type="email" placeholder="you@company.com" required aria-label="Work email">
+        <button type="submit" class="btn btn-primary">Start free trial</button>
+      </form>
+      <p class="cta-note" id="ctaNote">Free for teams up to 5 people.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark small">J</span> <span class="logo-text">Janova</span>
+    </div>
+    <p>© 2026 Janova. Built for teams who'd rather run their business than run their spreadsheets.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
